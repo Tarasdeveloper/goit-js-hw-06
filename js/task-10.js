@@ -20,7 +20,7 @@ destroyButton.addEventListener("click", () => {
 
 function createBoxes(amount) {
   let size = 30; // Размер первого элемента
-  for (let i = 0; i < amount; i++) {
+  for (let i = 0; i < amount; i += 1) {
     const box = document.createElement("div"); // Создание нового элемента div
     box.style.width = `${size}px`; // Установка ширины элемента
     box.style.height = `${size}px`; // Установка высоты элемента
