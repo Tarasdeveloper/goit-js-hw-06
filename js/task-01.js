@@ -11,8 +11,9 @@ console.log("Number of categories:", categoryCount);
 // Для каждого элемента li.item в списке
 categoryItems.forEach((categoryItem) => {
   // Найти заголовок элемента (тег h2) и количество элементов li внутри него
-  const categoryTitle = categoryItem.getElementsByTagName("h2")[0].textContent;
-  const categoryItemCount = categoryItem.getElementsByTagName("li").length;
+  const categoryTitle = categoryItem.firstElementChild.textContent;
+  const categoryItemCount =
+    categoryItem.lastElementChild.previousElementSibling.children.length;
 
   // Вывести в консоль текст заголовка и количество элементов в категории
   console.log("Category:", categoryTitle);
